@@ -1,0 +1,452 @@
+@import "vars";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    font-family: $ff;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin fs($fs, $fw, $lh) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@import "top";
+@import "footer";
+
+.top_center {
+    height: 148px;
+    background-color: #F8F3F4;
+
+    .top_mini {
+        padding-top: 59px;
+
+        .top_mini_text {
+            font-family: $ff;
+            @include fs(24px, 400, 29px);
+            color: $color7F;
+        }
+    }
+}
+
+.basket {
+    @extend .flex;
+    flex-direction: row;
+    margin-top: 96px;
+
+    .basket_left {
+        min-width: 652px;
+
+        .basket_sample {
+            display: flex;
+            box-shadow: 8px 8px 20px rgba(122, 122, 122, 0.5);
+
+            &:not(:first-child) {
+                margin-top: 40px;
+            }
+
+            .prod_basket {
+                width: 40%;
+
+                .basket_prod_img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .basket_prod_text {
+                margin-top: 22px;
+                margin-left: 31px;
+
+                .basket_hedding {
+                    display: flex;
+                    margin-bottom: 42px;
+
+                    .basket_prod_head {
+                        width: 262px;
+                        @include fs(24px, 400, 29px);
+                        color: $color22;
+                        padding-bottom: 4px;
+                    }
+
+                    .cross {
+                        height: 18px;
+                        padding-top: 6px;
+                        padding-left: 57px;
+                    }
+                }
+
+                .basket_prod_param {
+                    @include fs(22px, 400, 26px);
+                    color: #575757;
+
+                    &:not(:last-child) {
+                        padding-bottom: 6px;
+                    }
+
+                    .prod_cost {
+                        color: #EF5B70;
+                    }
+
+                    .quantity_prod {
+                        border: 1px solid #EAEAEA;
+                        width: 43px;
+                    }
+                }
+            }
+        }
+
+        .bask_form {
+            .basket_form_but {
+                @extend .flex;
+
+                .basket_prod_button {
+                    margin-top: 72px;
+                    margin-bottom: 129px;
+                    padding: 17px 40px 16px 39px;
+                    border: 1px solid #A4A4A4;
+                    background: $colorFF;
+
+                    &:hover {
+                        background-color: #EF5B70;
+                    }
+
+                    &:hover .basket_button_txt {
+                        color: $colorFF;
+                    }
+                }
+
+                .basket_button_txt {
+                    @include fs(14px, 300, 17px);
+                    color: $color00;
+                }
+            }
+        }
+    }
+
+    .basket_right {
+        margin-left: 129px;
+        width: 360px;
+
+        .shipping_form {
+            .shipping_head {
+                padding-bottom: 21px;
+                @include fs(16px, 300, 19px);
+                color: $color22;
+            }
+
+            .ship_input {
+                width: 340px;
+                border: 1px solid #A4A4A4;
+                padding-top: 13px;
+                padding-left: 17px;
+                padding-bottom: 16px;
+                margin-bottom: 21px;
+            }
+
+            .ship_form {
+                .ship_button {
+                    margin-top: 3px;
+                    padding: 10px 14px 11px 15px;
+                    border: 1px solid #A4A4A4;
+                    background: $colorFF;
+                    margin-bottom: 58px;
+
+                    &:hover {
+                        background-color: #EF5B70;
+                    }
+
+                    &:hover .ship_button_txt {
+                        color: $colorFF;
+                    }
+                }
+
+                .ship_button_txt {
+                    @include fs(11px, 300, 13px);
+                    color: #4A4A4A;
+                }
+            }
+        }
+
+        .total_price_box {
+            background: #F5F3F3;
+
+            .total_price {
+                padding: 39px 34px 42px 43px;
+
+                .ship_txt_sub {
+                    text-align: right;
+                    @include fs(11px, 400, 13px);
+                    color: #4A4A4A;
+                    padding-bottom: 12px;
+                }
+
+                .ship_txt_grand {
+                    text-align: right;
+                    @include fs(16px, 300, 19px);
+                    color: $color22;
+                    padding-bottom: 21px;
+                    margin-bottom: 17px;
+                    border-bottom: 1px solid #E2E2E2;
+                }
+
+                .total_cost {
+                    font-weight: 700;
+                    color: #EF5B70;
+                }
+
+                .ship_price_but {
+                    padding: 15px 43px 16px 41px;
+                    border: 1px solid #A4A4A4;
+                    background: #F5F3F3;
+                    align-items: $al-it;
+
+                    &:hover {
+                        background: $color7F;
+                    }
+
+                    &:hover .ship_price_but_text {
+                        color: $colorFF;
+                    }
+                }
+
+                .ship_price_but_text {
+                    @include fs(15px, 300, 19px);
+                    color: $color22;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    .container {
+        padding: 0 6% 0 3%;
+    }
+
+    .basket {
+        width: 94%;
+        flex-wrap: wrap;
+        margin-top: 59px;
+
+        .basket_left {
+            min-width: 734px;
+
+            .basket_sample {
+                .prod_basket {
+
+                    .basket_prod_img {
+                        width: 92%;
+                    }
+                }
+            }
+
+            .bask_form {
+                .basket_form_but {
+                    justify-content: space-around;
+                }
+            }
+        }
+
+        .basket_right {
+            min-width: 734px;
+            margin-left: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .shipping_form {
+                width: 49%;
+
+                .ship_input {
+                    width: 325px;
+                }
+            }
+
+            .total_price_box {
+                height: 214px;
+                width: 49%;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .footer {
+
+        .footer_center {
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .feedback {
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding-top: 54px;
+                padding-bottom: 140px;
+
+                .footer_center_left {
+                    padding-bottom: 48px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .container {
+        max-width: 358px;
+    }
+
+    .top {
+        .header_right {
+            .regist {
+                display: none;
+            }
+
+            .bask_href {
+                display: none;
+            }
+        }
+    }
+
+    .top_center {
+        .top_mini {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .basket {
+
+        .basket_left {
+            height: 480px;
+            margin-bottom: 48px;
+
+            .basket_sample {
+                width: 358px;
+                height: 188px;
+
+                .prod_basket {
+                    width: 40%;
+
+                    .basket_prod_img {
+                        width: 100%;
+                    }
+                }
+
+                .basket_prod_text {
+                    margin-top: 14px;
+                    width: 50%;
+
+                    .basket_hedding {
+                        margin-bottom: 26px;
+
+                        .basket_prod_head {
+                            @include fs(16px, 400, 19px);
+                        }
+
+                        .cross {
+                            padding-top: 0;
+                            padding-left: 31px;
+
+                            .cross_img {
+                                height: 10px;
+                            }
+                        }
+                    }
+
+                    .basket_prod_param {
+                        @include fs(14px, 400, 17px);
+                    }
+                }
+            }
+
+            .bask_form {
+                width: 358px;
+
+                .basket_form_but {
+                    justify-content: space-between;
+
+                    .basket_prod_button {
+                        width: 174px;
+                        height: 32px;
+                        padding: 0;
+                        margin-top: 30px;
+                        margin-bottom: 0;
+
+                        .basket_button_txt {
+                            @include fs(12px, 300, 14px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .basket_right {
+            flex-direction: column;
+
+            .shipping_form {
+                .ship_form {
+                    .ship_button {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .total_price_box {
+                margin-top: 49px;
+                margin-bottom: 96px;
+            }
+        }
+    }
+
+    .footer {
+        .footer_center {
+            width: 100%;
+
+            .feedback {
+                width: 358px;
+                padding-bottom: 110px;
+
+                .footer_center_left {
+                    max-width: 343px;
+                }
+
+                .footer_center_right {
+                    max-width: 341px;
+
+                    .footer_center_right_desc {
+                        text-align: center;
+                        @include fs(14px, 400, 22px);
+                    }
+
+                    .feedback_submit {
+                        max-width: 341px;
+                    }
+                }
+            }
+        }
+
+        .footer_bottom {
+            height: 143px;
+
+            .footer_down {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+        }
+    }
+}

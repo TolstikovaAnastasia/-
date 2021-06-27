@@ -1,0 +1,123 @@
+.top {
+    background-color: $color22;
+    height: 75px;
+
+    .header {
+        @extend .flex;
+        padding-top: 18px;
+        align-items: $al-it;
+
+        .header_left {
+            display: flex;
+            flex-direction: row;
+            align-items: $al-it;
+
+            .brand {
+                padding-right: 41px;
+            }
+
+            .search {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+
+                &:hover .search_form {
+                    display: flex;
+                }
+
+                .search_img {
+                    padding-right: 10px;
+                }
+
+                .search_form {
+                    display: none;
+                    font-family: $ff;
+                    height: 25px;
+
+                    .search_input {
+                        padding-left: 5px;
+                    }
+
+                    .search_button {
+                        width: 60px;
+                        color: $colorFF;
+                        border: 1px solid $color7F;
+                        background-color: $color7F;
+                    }
+                }
+            }
+        }
+
+        .header_right {
+            display: flex;
+            align-items: $al-it;
+
+            .menu_details {
+                display: block;
+
+                summary {
+                    list-style-type: none;
+                }
+
+                .mega_box {
+                    width: 210px;
+                    position: absolute;
+                    z-index: 1;
+                    border: 1px solid $colorFF;
+                    background-color: $colorFF;
+                    position: absolute;
+                    top: 75px;
+                    padding: 34px;
+
+                    .menu_head {
+                        display: flex;
+                        text-decoration: none;
+                        font-family: $ff;
+                        @include fs(14px, 700, 17px);
+                        color: $color00;
+                    }
+
+                    .item_flex {
+                        margin-top: 24px;
+
+                        .mega_hedding {
+                            display: flex;
+                            text-decoration: none;
+                            font-family: $ff;
+                            @include fs(14px, 400, 17px);
+                            padding-bottom: 12px;
+                            color: $color00;
+
+                            &:hover {
+                                color: #EF5B70;
+                            }
+                        }
+
+                        .mega_link {
+                            padding-left: 22px;
+                            padding-bottom: 11px;
+                            font-family: $ff;
+                            display: block;
+                            text-decoration: none;
+                            color: #6F6E6E;
+                            @include fs(14px, 400, 17px);
+
+                            &:hover {
+                                color: $color7F;
+                            }
+
+                            &:last-of-type {
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .regist {
+                padding-left: 33px;
+                padding-right: 33px;
+            }
+        }
+    }
+}
