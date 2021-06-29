@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2be4383886.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top">
+        <div class="header container">
+            <div class="header_left">
+                <a href="index.html" class="brand"><img src="img/brand.svg" alt="brand"></a>
+                <div class="search">
+                    <div class="search_img"><img src="img/search.svg" alt="search"></div>
+                    <form class="search_form">
+                        <input class="search_input" type="text">
+                        <button class="search_button" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <nav class="header_right">
+                    <details class="menu_details">
+                        <summary><img src="img/menu.svg" alt="menu"></summary>
+                        <div class="mega_box">
+                            <a class="menu_head" href="menu.html">MENU</a>
+                            <nav class="item_flex">
+                                <a class="mega_hedding" href="menu.html">MAN</a>
+                                <a class="mega_link" href="#">Accessories</a>
+                                <a class="mega_link" href="#">Bags</a>
+                                <a class="mega_link" href="#">Denim</a>
+                                <a class="mega_link" href="#">T-Shirts</a>
+                            </nav>
+                            <nav class="item_flex">
+                                <a class="mega_hedding" href="menu.html">WOMAN</a>
+                                <a class="mega_link" href="#">Accessories</a>
+                                <a class="mega_link" href="#">Jackets & Coats</a>
+                                <a class="mega_link" href="#">Polos</a>
+                                <a class="mega_link" href="#">T-Shirts</a>
+                                <a class="mega_link" href="#">Shirts</a>
+                            </nav>
+                            <nav class="item_flex">
+                                <a class="mega_hedding" href="menu.html">KIDS</a>
+                                <a class="mega_link" href="#">Accessories</a>
+                                <a class="mega_link" href="#">Jackets & Coats</a>
+                                <a class="mega_link" href="#">Polos</a>
+                                <a class="mega_link" href="#">T-Shirts</a>
+                                <a class="mega_link" href="#">Shirts</a>
+                                <a class="mega_link" href="#">Bags</a>
+                            </nav>
+                        </div>
+                    </details>
+                <a href="registration.html" class="regist"><img src="img/contact.svg" alt="registration"></a>
+                <a class="bask_href" href="basket.html"><img class="basket_img" src="img/basket.svg" alt="basket"></a>
+            </nav>
+        </div>
+    </div>
+    <div class="top_center">
+        <div class="top_mini container">
+            <div><span class="top_mini_text">SHOPPING CART</span></div>
+        </div>
+    </div>
+    <div class="basket container">
+        <section class="basket_left">
+            <div class="basket_sample">
+                <a class="prod_basket" href="product.html"><img class="basket_prod_img" src="img/product3.png" alt="product3"></a>
+                <div class="basket_prod_text">
+                    <div class="basket_hedding">
+                        <h3 class="basket_prod_head">MANGO PEOPLE<br>T-SHIRT</h3>
+                        <span class="cross"><img class="cross_img" src="img/cross.svg" alt="cross"></span>
+                    </div>
+                    <p class="basket_prod_param">Price: <span class="basket_prod_param prod_cost">$300</span></p>
+                    <p class="basket_prod_param">Color: Red</p>
+                    <p class="basket_prod_param">Size: Xl</p>
+                    <label class="basket_prod_param" for="quantity">Quantity:
+                        <input class="quantity_prod" id="quantity" type="number" required min="1" max="100">
+                    </label>
+                </div>
+            </div>
+            <div class="basket_sample">
+                <a class="prod_basket" href="product.html"><img class="basket_prod_img" src="img/product7.png" alt="product7"></a>
+                <div class="basket_prod_text">
+                    <div class="basket_hedding">
+                        <h3 class="basket_prod_head">MANGO PEOPLE<br>T-SHIRT</h3>
+                        <span class="cross"><img class="cross_img" src="img/cross.svg" alt="cross"></span>
+                    </div>
+                    <p class="basket_prod_param">Price: <span class="basket_prod_param prod_cost">$300</span></p>
+                    <p class="basket_prod_param">Color: Red</p>
+                    <p class="basket_prod_param">Size: Xl</p>
+                    <label class="basket_prod_param" for="numbers">Quantity:
+                        <input class="quantity_prod" id="numbers" type="number" required min="1" max="100">
+                    </label>
+                </div>
+            </div>
+            <div class="bask_form">
+                <form class="basket_form_but">
+                    <button class="basket_prod_button" type="submit"><span class="basket_button_txt">CLEAR SHOPPING
+                            CART</span></button>
+                    <button class="basket_prod_button" type="submit"><span class="basket_button_txt">CONTINUE
+                            SHOPPING</span></button>
+                </form>
+            </div>
+        </section>
+        <section class="basket_right">
+            <div class="shipping_form">
+                <h3 class="shipping_head">SHIPPING ADRESS</h3>
+                <input class="ship_input" placeholder="Bangladesh">
+                <input class="ship_input" placeholder="State">
+                <input class="ship_input" placeholder="Postcode / Zip">
+                <div class="ship_form">
+                    <form>
+                        <button class="ship_button" type="submit"><span class="ship_button_txt">GET A
+                                QUOTE</span></button>
+                    </form>
+                </div>
+                </div>
+            <div class="total_price_box">
+                <div class="total_price">
+                    <p class="ship_txt_sub">SUB TOTAL $900</p>
+                    <p class="ship_txt_grand">GRAND TOTAL <span class="ship_txt_grand total_cost">$900</span></p>
+                    <form>
+                        <button class="ship_price_but"><span class="ship_price_but_text">PROCEED TO CHECKOUT</span></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="footer_center">
+            <div class="feedback container">
+                <div class="footer_center_left">
+                    <img class="feedback_photo" src="img/photo.png" alt="photo">
+                    <p class="footer_center_left_desc">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                        <i>pulvinar
+                            purus condimentum“</i>
+                    </p>
+                </div>
+                <div class="footer_center_right">
+                    <h3 class="footer_center_right_head">SUBSCRIBE</h3>
+                    <p class="footer_center_right_desc">FOR OUR NEWLETTER AND PROMOTION</p>
+                    <form class="feedback_submit">
+                        <input class="email" type="email" placeholder="Enter Your Email">
+                        <button class="submit" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="footer_down container">
+                <div class=" footer_bottom_left">
+                    <p>&copy;
+                        <script
+                            type="text/javascript">var mdate = new Date(); document.write(mdate.getFullYear());</script>
+                        Brand All Rights Reserved.
+                    </p>
+                </div>
+                <div class="footer_bottom_right">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
